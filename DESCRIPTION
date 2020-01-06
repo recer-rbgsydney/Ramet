@@ -1,0 +1,10 @@
+Package: Ramet
+Type: Package
+Title: Identification of clonal individuals (ramets) from genotype data
+Version: 1.0
+Date: 2019-12-23
+Author: Who wrote it
+Maintainer: Jason Bragg <jasongbragg@gmail.com>
+Description: Identification of clonal individuals (ramets) from genotype data
+License: MIT
+RoxygenNote: 5.0.1
