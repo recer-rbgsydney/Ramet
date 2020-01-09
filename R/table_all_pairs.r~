@@ -5,7 +5,7 @@
 #' @author Jason Bragg (jasongbragg@gmail.com)
 #' @export
 
-tabulate_all_pairs <- function( gt ) {
+table_all_pairs <- function( gt ) {
 
    population <- 1:nrow(gt)
 
@@ -23,7 +23,7 @@ tabulate_all_pairs <- function( gt ) {
 
          gtp <- gt[c(ii, ij), ]
 
-         plist <- tabulate_genotypes(gtp)
+         plist <- table_genotypes(gtp)
 
          plist[[ "indices" ]] <- c(ii, ij)
          plist[[ "names" ]] <- rownames(gt)[c(ii, ij)]
