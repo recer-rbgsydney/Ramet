@@ -32,7 +32,7 @@ ramet_summary <- function(ramet_set, measure_matrix) {
 
    for (i in 1:length(vs)) {
 
-      inames <- names(rs)[ which(rs == vs[i]) ]
+      inames <- names(ramet_set)[ which(ramet_set == vs[i]) ]
       if (length(inames > 1)) {
 
          for (j in 1:length(inames)) {

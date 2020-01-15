@@ -32,7 +32,7 @@ ramet_summary <- function(ramet_set, measure_matrix) {
 
    for (i in 1:length(vs)) {
 
-      inames <- names(rs)[ which(rs == vs[i]) ]
+      inames <- names(ramet_set)[ which(ramet_set == vs[i]) ]
       if (length(inames > 1)) {
 
          for (j in 1:length(inames)) {
@@ -57,10 +57,7 @@ ramet_summary <- function(ramet_set, measure_matrix) {
    min_c=min(  mmc_df[,3][ which(mmc_df[,4] == "c")  ] )
    min_nc=min(  mmc_df[,3][ which(mmc_df[,4] == "nc")  ] )
 
-   mean_c=mean_c, mean_nc=mean_nc, max_c=max_c, max_nc=max_nc, min_c=min_c, min_nc=min_nc
-
-
-   return(list(values=mmc_df, mean_c=mean_c, mean_nc=mean_nc, max_c=max_c, max_nc=max_nc, min_c=min_c, min_nc=min_nc)
+   return(list(values=mmc_df, mean_c=mean_c, mean_nc=mean_nc, max_c=max_c, max_nc=max_nc, min_c=min_c, min_nc=min_nc))
 
 }
 

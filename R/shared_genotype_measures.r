@@ -19,6 +19,11 @@ mdshom_mat <- mat.or.vec(nsamples, nsamples)
 rownames(mdshom_mat) <- snames
 colnames(mdshom_mat) <- snames
 
+mdshct_mat <- mat.or.vec(nsamples, nsamples)
+rownames(mdshct_mat) <- snames
+colnames(mdshct_mat) <- snames
+
+
 for (ip in 1:length(ptables)) {
 
    ptables[[ ip ]]
@@ -37,8 +42,10 @@ for (ip in 1:length(ptables)) {
    mdshom_mat[ip_names[1],ip_names[2]] <- (g3tab[1,3] + g3tab[3,1] ) / (g3tab[1,1] + g3tab[3,3] ) 
    mdshom_mat[ip_names[2],ip_names[1]] <- (g3tab[1,3] + g3tab[3,1] ) / (g3tab[1,1] + g3tab[3,3] )
 
+   mdshct_mat[ip_names[1],ip_names[2]] <- g2tab[2,2]
+   mdshct_mat[ip_names[2],ip_names[1]] <- g2tab[2,2]
 
 }
 
-return(list(mdshet_mat=as.dist(mdshet_mat), mdshom_mat=as.dist(mdshom_mat)))
+return(list(mdshet_mat=as.dist(mdshet_mat), mdshom_mat=as.dist(mdshom_mat), mdshct_mat=as.dist(mdshct_mat)))
 }
