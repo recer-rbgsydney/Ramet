@@ -21,9 +21,9 @@ ramets_to_prune <- function(rs, method="random", gt=NULL) {
             samples_to_prune <- c(samples_to_prune, sample(inames)[-1] )
          }
          if (method=="least_missing") {
-            i_least_missing  <- names(which.min(rowSums(is.na(dsnp[inames,]))))
+            i_least_missing  <- names(which.min(rowSums(is.na(gt[inames,]))))
             samples_to_prune <- c(samples_to_prune, inames[ which(inames != i_least_missing) ] )
-            cat(i_least_missing,"\n")
+            #cat(i_least_missing,"\n")
          }
       } 
    }

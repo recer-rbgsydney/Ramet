@@ -18,7 +18,7 @@ collect_ramet_sets <- function(dm, dthresh, lt=TRUE) {
      g <- subset(subset(melt(as.matrix(dm)), value > dthresh ), value != 0)
    }
 
-   ig <- make_graph(as.matrix(g[,c(1,2)]))
+   ig <- graph_from_edgelist(as.matrix(g[,c(1,2)]), directed = FALSE)
    cig <- components(ig)$membership
 
    return(cig)
