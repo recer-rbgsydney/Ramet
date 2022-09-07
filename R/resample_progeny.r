@@ -8,6 +8,7 @@
 
 resample_progeny <- function( pop, fam, tissue, nseed, nfam, npop=NULL ) {
    # comment
+   # another comment
    cp <- count_progeny(pop, fam, tissue)
 
    class(cp$population) <- 'character'
